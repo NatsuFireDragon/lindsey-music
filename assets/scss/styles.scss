@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
+@import "reset";
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Variables
+$blue: #458ce2;
+$red:#d10808;
+$dark-blue: #1b2941;
+$black-blue: #111a29;
+
+// GLOBAL
+body {
+  font-family: 'Spartan', sans-serif;
+  font-size: 16px;
+  background: $black-blue;
+  color: #fff;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 20px;
+  // background: deeppink;
+}
+
+a {
+  text-decoration: none;
+  color: $blue;
+}
+
+p {
+  font-size: 1.5em;
+}
+
+.red-text {
+  color: $red;
+}
+
+
+// Title Bar
+.head-title-bar {
+  background: $dark-blue;
+  color: #fff;
+  padding: 50px 10px;
+  .head-wrap {
+    display: grid;
+    grid-template-columns: 1fr .2fr;
+    grid-template-rows: 70px;
+    justify-items: center;
+    align-items: center;
+    .logo {
+      font-size: 2.5em;
+      text-transform: uppercase;
+    }
+    .menu-bars {
+      font-size: 5em;
+    }
+  }
+}
+
+// Header
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  margin-top: 90px;
+  img {
+    width: 100%;
+    margin-bottom: 90px;
+  }
+  .info-box {
+    padding: 20px 0;
+    h1 {
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 5em;
+      margin-bottom: 30px;
+    }
+    h2 {
+      font-weight: 500;
+      text-transform: uppercase;
+      font-size: 4em;
+      line-height: 1.5;
+    }
+    p {
+      line-height: 1.7;
+      padding: 20px 0;
+    }
+    a {
+      font-weight: 700;
+      font-size: 1.2em;
+    }
+  }
+}
+
+// Albums Section
+.albums {
+  text-align: center;
+  padding: 50px 0;
+  h1 {
+    font-size: 3em;
+    text-transform: uppercase;
+    line-height: 1.5;
+  }
+  .store-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    .buy-now-box {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 2.5fr 1fr;
+      align-items: center;
+      img {
+        margin: 0 auto;
+        width: 180px;
+        height: 100%;
+      }
+      button {
+        border: none;
+        margin: 0 auto;
+        width: 50%;
+        padding: 18px 10px;
+        background: $blue;
+        border-radius: 10px;
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: 800;
+        font-size: 1.3em;
+      }
+    }
+  }
+}
+
+// About Section
+.about {
+  padding: 50px 0;
+  h2 {
+    font-size: 3em;
+    text-transform: uppercase;
+    line-height: 1.5;
+  }
+  p {
+    line-height: 2;
+    padding: 10px 0;
+  }
+  .quote-box {
+    background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Cquote1_black.svg/1200px-Cquote1_black.svg.png) left center no-repeat;
+    background-size: 200px;
+    text-align: center;
+    margin: 50px 0;
+    q {
+      font-style: italic;
+      line-height: 2;
+      font-size: 2.3em;
+      font-weight: 300;
+    }
+  }
+}
