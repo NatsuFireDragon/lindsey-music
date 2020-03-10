@@ -53,13 +53,17 @@ p {
   background: $dark-blue;
   color: #fff;
   padding: 50px 10px;
+  overflow: hidden;
+  position: fixed;
+  top: 0%;
+  width: 100%;
   .head-wrap {
     display: grid;
     grid-template-columns: 2fr .2fr;
     grid-template-rows: 70px;
     align-items: center;
     .logo {
-      font-size: 2.5em;
+      font-size: 3.5em;
       text-transform: uppercase;
       font-weight: 500;
     }
@@ -80,7 +84,7 @@ p {
   margin-top: 90px;
   img {
     width: 100%;
-    margin-bottom: 90px;
+    margin: 160px 0 90px;
   }
   .info-box {
     padding: 20px 0;
