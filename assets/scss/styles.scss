@@ -10,6 +10,7 @@
 
 // Variables
 $blue: #458ce2;
+$transparent-blue: rgba(69, 140, 226, 0.4);
 $red:#d10808;
 $dark-blue: #1b2941;
 $black-blue: #111a29;
@@ -26,7 +27,6 @@ body {
   width: 90%;
   margin: 0 auto;
   padding: 0 20px;
-  // background: deeppink;
 }
 
 a {
@@ -57,6 +57,7 @@ p {
   position: fixed;
   top: 0%;
   width: 100%;
+  z-index: 300;
   .head-wrap {
     display: grid;
     grid-template-columns: 2fr .2fr;
@@ -211,5 +212,81 @@ p {
         }
       }
     }
+  }
+}
+
+// Video Section
+.videos {
+  padding: 50px 0;
+  text-align: center;
+  .section-title {
+    text-align: left;
+  }
+  .video-box {
+    position: relative;
+    margin: 50px 0;
+    .video-title {
+      font-size: 3em;
+      font-weight: 500;
+      text-align: center;
+      padding: 20px 0;
+    }
+    img.video-img {
+      background: #000;
+      padding: 50px 0;
+      width: 100%;
+    }
+    img.play-btn {
+      width: 20%;
+      position: absolute;
+      top: 45%;
+      left: 40%;
+      cursor: pointer;
+    }
+  }
+  a {
+    font-size: 3em;
+  }
+}
+
+footer {
+  padding: 50px 0;
+  text-align: center;
+  .newsletter-signup {
+    width: 100%;
+    padding: 100px 0;
+    .form-title {
+      font-size: 4.5em;
+      text-transform: uppercase;
+      line-height: 1.3;
+      padding: 20px 0;
+    }
+    input {
+      display: inline-block;
+      font-size: 3em;
+      padding: 20px 10px;
+      margin: 10px 0;
+      border-radius: 15px;
+      &[type="submit"] {
+        display: block;
+        margin: 30px auto;
+        background: $blue;
+        border: none;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 4px;
+        padding: 30px 50px;
+      }
+    }
+  }
+  .back-to-top-link {
+    text-transform: uppercase;
+    font-size: .8em;
+    font-weight: 700;
+    letter-spacing: 5px;
+  }
+  .social-box {
+    
   }
 }
