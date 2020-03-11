@@ -10,7 +10,6 @@
 
 // Variables
 $blue: #458ce2;
-$transparent-blue: rgba(69, 140, 226, 0.4);
 $red:#d10808;
 $dark-blue: #1b2941;
 $black-blue: #111a29;
@@ -285,8 +284,32 @@ footer {
     font-size: .8em;
     font-weight: 700;
     letter-spacing: 5px;
+    font-size: 1em;
+    &:hover {
+      color: #fff;
+    }
   }
   .social-box {
-    
+    padding: 50px 0;
+    .grid-social {
+      display: grid;
+      grid-template-columns: repeat(6,1fr);
+      grid-template-rows: auto;
+      justify-items: center;
+      .icon {
+        fill: $blue;
+        width: 48px;
+        height: 48px;
+        &:hover {
+          fill: #fff;
+        }
+      }
+    }
+  }
+  .copyright {
+    text-transform: uppercase;
+    padding: 80px 0 0;
+    font-size: .7em;
+    color: $blue;
   }
 }
