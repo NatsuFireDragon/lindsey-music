@@ -1,5 +1,5 @@
 let menuBars = document.querySelector('.menu-bars');
-let mobileMenu = document.querySelector('.box');
+let mobileMenu = document.querySelector('.mobile-box');
 let close = document.querySelector('.close-btn');
 let listItems = document.getElementsByTagName('li');
 

@@ -18,6 +18,7 @@ body {
   font-size: 16px;
   background: $black-blue;
   color: #fff;
+  cursor: default;
 }
 
 .container {
@@ -45,7 +46,8 @@ p {
   line-height: 1.5;
 }
 
-.box {
+// Mobile Menu
+.mobile-box {
   position: fixed;
   background: rgba(0,0,0, .9);
   display: flex;
@@ -65,13 +67,15 @@ p {
     height: 100vh;
     width: 100%;
   }
-  .mobile {
+  .mobile-menu {
     .close-btn {
       font-size: 10em;
       position: absolute;
       top: 50px;
       left: 50px;
       color: $red;
+      padding: 30px;
+      cursor: pointer;
     }
     ul > li {
       font-size: 6em;
@@ -102,13 +106,16 @@ p {
     grid-template-columns: 2fr .2fr;
     grid-template-rows: 70px;
     align-items: center;
-    .logo {
+    a.logo {
       font-size: 3.5em;
       text-transform: uppercase;
       font-weight: 500;
+      color: #fff;
+      cursor: pointer;
     }
     .menu-bars {
       font-size: 4.5em;
+      cursor: pointer;
     }
     img {
       width: 100%;
@@ -150,6 +157,11 @@ header {
       a {
         font-weight: 700;
         font-size: 1.2em;
+        color: $blue;
+        transition: all .5s ease-in-out;
+        &:hover {
+          color: $red;
+        }
       }
     }
   }
@@ -175,7 +187,6 @@ header {
         height: 60%;
       }
       button {
-        border: none;
         margin: 0 auto;
         width: 60%;
         padding: 25px 5px;
@@ -185,6 +196,13 @@ header {
         color: #fff;
         font-weight: 800;
         font-size: 1.8em;
+        border: 2px solid $blue;
+        cursor: pointer;
+        transition: all .4s ease-in-out;
+        &:hover {
+          background: $dark-blue;
+          border: 2px solid white;
+        }
       }
     }
   }
@@ -244,6 +262,10 @@ header {
         width: 50%;
         border: 6px solid #fff;
         cursor: pointer;
+        transition: background .4s ease-in-out;
+        &:hover {
+          background: $blue;
+        }
         &:last-of-type {
           margin: 0 auto;
         }
@@ -289,6 +311,11 @@ header {
   }
   a {
     font-size: 3em;
+    color: $blue;
+    transition: all .5s ease-in-out;
+    &:hover {
+      color: $red;
+    }
   }
 }
 
@@ -310,16 +337,28 @@ footer {
       padding: 20px 10px;
       margin: 10px 0;
       border-radius: 15px;
+      transition: all .4s ease-in-out;
+      &::placeholder {
+        color: $black-blue;
+      }
+      &:focus {
+        background: $blue;
+      }
       &[type="submit"] {
         display: block;
         margin: 30px auto;
         background: $blue;
-        border: none;
+        border: 2px solid $blue;
         color: #fff;
         text-transform: uppercase;
         font-weight: 700;
         letter-spacing: 4px;
         padding: 30px 50px;
+        cursor: pointer;
+        &:hover {
+          background: $dark-blue;
+          border: 2px solid #fff;
+        }
       }
     }
   }
@@ -329,6 +368,7 @@ footer {
     font-weight: 700;
     letter-spacing: 5px;
     font-size: 1.2em;
+    transition: color .4s ease-in-out;
     &:hover {
       color: #fff;
     }
@@ -344,6 +384,8 @@ footer {
         fill: $blue;
         width: 48px;
         height: 48px;
+        transition: fill .4s ease-in-out;
+        cursor: pointer;
         &:hover {
           fill: #fff;
         }
