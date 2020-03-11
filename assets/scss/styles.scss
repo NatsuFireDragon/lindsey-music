@@ -1,6 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
 @import "reset";
-
 
 * {
   margin: 0;
@@ -47,6 +45,40 @@ p {
   line-height: 1.5;
 }
 
+.box {
+  position: fixed;
+  background: rgba(0,0,0, .9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 0%;
+  z-index: 600;
+  text-align: center;
+  overflow-x: hidden;
+  transition: all .6s ease-in-out;
+  &.active {
+    opacity: 1;
+    height: 100vh;
+    width: 100%;
+  }
+  .mobile {
+    .close-btn {
+      font-size: 10em;
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      color: $red;
+    }
+    ul > li {
+      font-size: 6em;
+      padding: 50px 0;
+    }
+  }
+}
 // Title Bar
 .head-title-bar {
   background: $dark-blue;
@@ -77,36 +109,39 @@ p {
 }
 
 // Header
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  margin-top: 90px;
-  img {
-    width: 100%;
-    margin: 160px 0 90px;
-  }
-  .info-box {
-    padding: 20px 0;
-    h1 {
-      font-weight: 800;
-      text-transform: uppercase;
-      font-size: 5em;
-      margin-bottom: 30px;
+header {
+  position: relative;
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    margin-top: 90px;
+    img {
+      width: 100%;
+      margin: 160px 0 90px;
     }
-    h2 {
-      font-weight: 500;
-      text-transform: uppercase;
-      font-size: 4em;
-      line-height: 1.5;
-    }
-    p {
-      line-height: 1.7;
+    .info-box {
       padding: 20px 0;
-    }
-    a {
-      font-weight: 700;
-      font-size: 1.2em;
+      h1 {
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: 5em;
+        margin-bottom: 30px;
+      }
+      h2 {
+        font-weight: 500;
+        text-transform: uppercase;
+        font-size: 4em;
+        line-height: 1.5;
+      }
+      p {
+        line-height: 1.7;
+        padding: 20px 0;
+      }
+      a {
+        font-weight: 700;
+        font-size: 1.2em;
+      }
     }
   }
 }
