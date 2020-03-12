@@ -208,13 +208,13 @@ header {
     .buy-now-box {
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 2fr .5fr;
+      grid-template-rows: 1fr .5fr;
       align-items: center;
       margin: 10px 0;
       img {
         margin: 0 auto;
         width: 80%;
-        height: 60%;
+        height: 80%;
       }
       button {
         margin: 0 auto;
