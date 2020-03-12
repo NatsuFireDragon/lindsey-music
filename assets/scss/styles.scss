@@ -208,7 +208,7 @@ header {
     .buy-now-box {
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr .5fr;
+      grid-template-rows: .5fr .5fr;
       align-items: center;
       margin: 10px 0;
       img {
