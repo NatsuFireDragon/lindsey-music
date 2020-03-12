@@ -74,6 +74,10 @@ a {
       font-size: 2em;
       padding: 10px 0;
       margin: 10px 0;
+      @include for-size(tablet, up) {
+        font-size: 2.5em;
+        font-size: 500;
+      }
       a {
         padding: 10px;
         &:hover {
@@ -90,7 +94,7 @@ a {
 .head-title-bar {
   background: $dark-blue;
   color: #fff;
-  padding: 20px 0;
+  padding: 10px 0;
   overflow: hidden;
   position: fixed;
   top: 0%;
@@ -102,7 +106,7 @@ a {
     grid-template-rows: 50px;
     align-items: center;
     a.logo {
-      font-size: 1.3em;
+      font-size: 1.5em;
       text-transform: uppercase;
       font-weight: 500;
       color: #fff;
@@ -126,34 +130,62 @@ header {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+    @include for-size(tablet, up) {
+      grid-template-columns: 1fr 1fr;
+      margin-top: 90px;
+    }
     img {
       width: 100%;
       margin: 115px 0 20px;
+      @include for-size(tablet, up) {
+        margin: 40px 0 20px;
+        grid-column: 2 / 3;
+      }
     }
     .info-box {
       padding: 20px 0;
+      @include for-size(tablet, up) {
+        padding: 20px;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+      }
       h1 {
         font-weight: 800;
         text-transform: uppercase;
         font-size: 2em;
         margin-bottom: 8px;
+        text-align: center;
+        @include for-size(tablet, up) {
+          text-align: left;
+        }
       }
       h2 {
         font-weight: 500;
         text-transform: uppercase;
         font-size: 1.8em;
         line-height: 1.5;
+        text-align: center;
+        @include for-size(tablet, up) {
+          font-size: 1.6em;
+          text-align: left;
+        }
       }
       p {
         line-height: 1.7;
         padding: 10px 0;
         font-size: 1.2em;
+        @include for-size(tablet, up) {
+          font-size: 1em;
+        }
       }
       a {
         font-weight: 700;
         font-size: 1.2em;
         color: $blue;
         transition: all .5s ease-in-out;
+        @include for-size(tablet, up) {
+          font-size: 1.1em;
+        }
         &:hover {
           color: $red;
         }
@@ -245,38 +277,47 @@ header {
       line-height: 1.4;
       padding: 15px 0;
       border-bottom: 1px solid rgba(255,255,255, .3);
+      @include for-size(tablet,up) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
       &:first-of-type {
         border-top: 1px solid rgba(255,255,255, .3);
       }
-      .date {
-        font-weight: 700;
-        text-transform: uppercase;
-        font-size: 1.2em;
-      }
-      .venu-text {
-        font-weight: 500;
-        font-size: 1em;
-        text-transform: capitalize;
-      }
-      .btn-cell {
-        background: #00040c;
-        margin: 10px auto;
-        padding: 15px;
-        width: 50%;
-        border: 2px solid #fff;
-        cursor: pointer;
-        transition: background .4s ease-in-out;
-        &:hover {
-          background: $blue;
-        }
-        &:last-of-type {
-          margin: 0 auto;
-        }
-        a {
-          color: #fff;
+      .tour-info {
+        align-self: center;
+        .date {
+          font-weight: 700;
           text-transform: uppercase;
-          font-weight: 800;
-          font-size: .9em;
+          font-size: 1.2em;
+        }
+        .venu-text {
+          font-weight: 500;
+          font-size: 1em;
+          text-transform: capitalize;
+        }
+      }
+      .tour-btns {
+        .btn-cell {
+          background: #00040c;
+          margin: 10px auto;
+          padding: 15px;
+          width: 50%;
+          border: 2px solid #fff;
+          cursor: pointer;
+          transition: background .4s ease-in-out;
+          &:hover {
+            background: $blue;
+          }
+          &:last-of-type {
+            margin: 0 auto;
+          }
+          a {
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 800;
+            font-size: .9em;
+          }
         }
       }
     }
