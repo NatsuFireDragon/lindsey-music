@@ -215,6 +215,11 @@ header {
         margin: 0 auto;
         width: 80%;
         height: 50%;
+        @include for-size(tablet,up) {
+          width: 70%;
+          height: 80px;
+          margin: 12px auto;
+        }
       }
       button {
         margin: 0 auto;
@@ -228,8 +233,9 @@ header {
         font-size: .8em;
         border: 2px solid $blue;
         @include for-size(tablet,up) {
-          width: 75%;
+          width: 65%;
           padding: 20px 5px;
+          font-size: 1em;
         }
         cursor: pointer;
         transition: all .4s ease-in-out;
