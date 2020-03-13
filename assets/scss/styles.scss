@@ -21,6 +21,7 @@ body {
 
 .container {
   width: 90%;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -37,6 +38,7 @@ a {
   font-size: 1.7em;
   text-transform: uppercase;
   line-height: 1.5;
+  @include for-size
 }
 
 // Mobile Menu
@@ -115,6 +117,9 @@ a {
     .menu-bars {
       font-size: 2.2em;
       cursor: pointer;
+      @include for-size(tablet, up) {
+        font-size: 2.5em;
+      }
     }
     img {
       width: 100%;
@@ -133,6 +138,7 @@ header {
     @include for-size(tablet, up) {
       grid-template-columns: 1fr 1fr;
       margin-top: 90px;
+      align-items: center;
     }
     img {
       width: 100%;
@@ -158,6 +164,9 @@ header {
         @include for-size(tablet, up) {
           text-align: left;
         }
+        @include for-size(desktop, up) {
+          font-size: 2.5em;
+        }
       }
       h2 {
         font-weight: 500;
@@ -169,6 +178,9 @@ header {
           font-size: 1.6em;
           text-align: left;
         }
+        @include for-size(desktop, up) {
+          font-size: 2em;
+        }
       }
       p {
         line-height: 1.7;
@@ -176,6 +188,9 @@ header {
         font-size: 1.2em;
         @include for-size(tablet, up) {
           font-size: 1em;
+        }
+        @include for-size(desktop, up) {
+          font-size: 1.3em;
         }
       }
       a {
@@ -204,6 +219,9 @@ header {
     grid-template-rows: auto;
     @include for-size(tablet, up) {
       grid-template-columns: repeat(3, 1fr);
+    }
+    @include for-size(tablet, up) {
+      grid-template-columns: repeat(4, 1fr);
     }
     .buy-now-box {
       display: grid;
@@ -387,6 +405,9 @@ footer {
       margin: 5px 0;
       border-radius: 5px;
       transition: all .4s ease-in-out;
+      @include for-size(tablet, up) {
+        margin: 10px 20px;  
+      }
       &::placeholder {
         color: $black-blue;
       }
@@ -429,12 +450,19 @@ footer {
       grid-template-columns: repeat(6,1fr);
       grid-template-rows: auto;
       justify-items: center;
+      @include for-size(tablet, up) {
+        width: 60%;
+      }
       .icon {
         fill: $blue;
         width: 24px;
         height: 24px;
         transition: fill .4s ease-in-out;
         cursor: pointer;
+        @include for-size(tablet, up) {
+          width: 42px;
+          height: 42px; 
+        }
         &:hover {
           fill: #fff;
         }
